@@ -1,9 +1,9 @@
 /*
-This is TCP/IP realization sample. Code write by UkjinJang.
-Using Operating System is Linux; raspbian to raspberry pi.
-I couldn't transfer Layer 4 to Layer 7 at 2016.05.31 (Report by Univ.)
-I'll use this code for spoofing.
-*/
+   This is TCP/IP realization sample. Code write by UkjinJang.
+   Using Operating System is Linux; raspbian to raspberry pi.
+   I couldn't transfer Layer 4 to Layer 7 at 2016.05.31 (Report by Univ.)
+   I'll use this code for spoofing.
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -95,7 +95,7 @@ void * sendMessage(void * arg) {		// send to server in thread
 	int i = 0;
 	timeout.tv_sec = 5;
 	timeout.tv_usec = 0;
-	
+
 	printf("## Name : ");
 	pthread_mutex_lock(&mutx);
 	fgets(name, 30, stdin);		// name variable is public variable, so must use lock&unlock
@@ -256,4 +256,3 @@ int main(int argc, char *argv[]) {
 	close(sock);
 	return 0;
 }
-
